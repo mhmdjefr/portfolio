@@ -1,0 +1,22 @@
+[
+  {
+    "id": "money-manager",
+    "name": "Money Manager",
+    "tagline": "Personal finance tracking, built native for Android.",
+    "description": "A personal finance app with per-category budgets, CSV import/export, multi-wallet asset/liability tracking, and month-over-month stats built on a fully reactive Compose + Room stack.",
+    "stack": ["Kotlin", "Jetpack Compose", "Room", "MVVM", "KSP", "StateFlow"],
+    "repo": "https://github.com/mhmdjefr/money-manager-app",
+    "status": "v1.1.0",
+    "type": "Android"
+  },
+  {
+    "id": "kinematic-hand-tracking",
+    "name": "Kinematic Hand Tracking",
+    "tagline": "A Fruit Ninja-style game controlled entirely by your hands.",
+    "description": "A real-time computer vision game using webcam hand tracking to slice falling objects dual-hand blade trails, combo multipliers, particle effects, and delta-time physics running at a steady frame rate.",
+    "stack": ["Python", "OpenCV", "MediaPipe", "NumPy", "Pygame"],
+    "repo": "https://github.com/mhmdjefr/kinematic-hand-tracking",
+    "status": "Active",
+    "type": "Computer Vision"
+  }
+]

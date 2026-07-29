@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeffri — Software Developer</title>
+<meta name="description" content="Portfolio of Jeffri — Software Developer working across mobile (Kotlin/Jetpack Compose), web fundamentals, and computer vision experiments.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#F5F8FF',
+          surface: '#FFFFFF',
+          card: '#FFFFFF',
+          ink: '#152040',
+          body: '#5B6478',
+          primary: '#4C7DF0',
+          primarydark: '#3A63D6',
+          soft: '#E4ECFF',
+          line: '#E3E9F7'
+        },
+        fontFamily: {
+          display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          sans: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-bg text-ink font-sans antialiased selection:bg-soft">
+
+<!-- ===== NAV ===== -->
+<header class="fixed top-0 inset-x-0 z-50 flex justify-center px-4 pt-4">
+  <nav class="relative flex items-center gap-1 rounded-full border border-line bg-white/80 backdrop-blur-lg px-2 py-2 shadow-sm shadow-primary/5">
+    <a href="#home" class="font-display font-bold text-sm px-4 text-ink">Jeffri<span class="text-primary">.</span></a>
+    <div class="hidden sm:flex items-center gap-1 font-display text-sm font-medium" id="navLinks">
+      <a href="#home" data-link data-target="home" class="nav-link relative px-4 py-2 rounded-full text-body transition-colors">Home</a>
+      <a href="#about" data-link data-target="about" class="nav-link relative px-4 py-2 rounded-full text-body transition-colors">About</a>
+      <a href="#skills" data-link data-target="skills" class="nav-link relative px-4 py-2 rounded-full text-body transition-colors">Skills</a>
+      <a href="#projects" data-link data-target="projects" class="nav-link relative px-4 py-2 rounded-full text-body transition-colors">Projects</a>
+      <a href="#contact" data-link data-target="contact" class="nav-link relative px-4 py-2 rounded-full text-body transition-colors">Contact</a>
+    </div>
+    <button id="menuBtn" class="sm:hidden w-9 h-9 flex items-center justify-center rounded-full text-ink">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+</header>
+<div id="mobileMenu" class="hidden fixed top-20 inset-x-4 z-40 rounded-2xl bg-white border border-line shadow-xl overflow-hidden font-display text-sm sm:hidden">
+  <a href="#home" data-link data-target="home" class="block px-5 py-3.5 text-body hover:text-ink">Home</a>
+  <a href="#about" data-link data-target="about" class="block px-5 py-3.5 text-body hover:text-ink">About</a>
+  <a href="#skills" data-link data-target="skills" class="block px-5 py-3.5 text-body hover:text-ink">Skills</a>
+  <a href="#projects" data-link data-target="projects" class="block px-5 py-3.5 text-body hover:text-ink">Projects</a>
+  <a href="#contact" data-link data-target="contact" class="block px-5 py-3.5 text-body hover:text-ink">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="relative overflow-hidden px-6 pt-40 pb-24 sm:pt-48 sm:pb-32">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="max-w-3xl mx-auto text-center relative">
+    <p class="font-display text-sm font-semibold text-primary tracking-wide uppercase mb-5">Hi, I'm</p>
+    <h1 id="typedName" class="font-display font-extrabold text-ink text-4xl sm:text-6xl leading-[1.1] tracking-tight min-h-[1.2em]"></h1>
+    <p class="mt-5 text-lg sm:text-xl text-body">Software Developer</p>
+    <p class="mt-6 text-base sm:text-lg text-body max-w-xl mx-auto leading-relaxed">
+      IT student building across mobile (Kotlin &amp; Jetpack Compose) and the web (HTML, CSS, JavaScript),
+      with side experiments in computer vision.
+    </p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a href="#projects" class="px-6 py-3 rounded-full bg-primary text-white font-display font-semibold text-sm hover:bg-primarydark transition-colors shadow-lg shadow-primary/25">
+        View Projects
+      </a>
+      <a href="https://github.com/mhmdjefr" target="_blank" rel="noopener" class="px-6 py-3 rounded-full bg-white border border-line text-ink font-display font-semibold text-sm hover:border-primary hover:text-primary transition-colors">
+        My GitHub
+      </a>
+    </div>
+  </div>
+
+  <div id="statGrid" class="max-w-3xl mx-auto mt-16 grid grid-cols-3 gap-4 relative"></div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="px-6 py-24 border-t border-line">
+  <div class="max-w-5xl mx-auto grid sm:grid-cols-[0.9fr_1.4fr] gap-12 items-start">
+    <div>
+      <p class="font-display text-sm font-semibold text-primary uppercase tracking-wide mb-3">About Me</p>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink leading-tight">From idea to app, one line of code at a time.</h2>
+    </div>
+    <div class="space-y-5 text-body text-base sm:text-lg leading-relaxed">
+      <p>
+        I'm an <span class="text-ink font-semibold">IT student</span> who enjoys building things end-to-end.
+        On mobile, I work with <span class="text-ink font-semibold">Kotlin and Jetpack Compose</span>, using
+        MVVM architecture and Room for local storage. I'm also comfortable with core web technologies
+        HTML, CSS, and JavaScript for building and styling interfaces on the web.
+      </p>
+      <p>
+        Outside of coursework, I like exploring <span class="text-ink font-semibold">computer vision</span>
+        with OpenCV and MediaPipe, turning a webcam feed into interactive, camera-driven experiences
+        a good way to pick up new systems outside my usual stack.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="px-6 py-24 border-t border-line bg-white/60">
+  <div class="max-w-5xl mx-auto">
+    <p class="font-display text-sm font-semibold text-primary uppercase tracking-wide mb-3 text-center">Skills</p>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink text-center mb-14">Tools I work with</h2>
+    <div id="skillGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="px-6 py-24 border-t border-line">
+  <div class="max-w-5xl mx-auto">
+    <p class="font-display text-sm font-semibold text-primary uppercase tracking-wide mb-3 text-center">Projects</p>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink text-center mb-8">Some things I've built</h2>
+
+    <div id="filterBar" class="flex flex-wrap justify-center gap-2 mb-12"></div>
+
+    <div id="projectGrid" class="grid sm:grid-cols-2 gap-6">
+      <!-- populated by js/main.js from data/projects.json -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="px-6 py-28 border-t border-line">
+  <div class="max-w-2xl mx-auto text-center">
+    <p class="font-display text-sm font-semibold text-primary uppercase tracking-wide mb-3">Contact</p>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink mb-5">Let's connect</h2>
+    <p class="text-body text-base sm:text-lg leading-relaxed mb-10">
+      Open to opportunities and interesting collaborations. Reach out through any of the channels below.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 font-display text-sm font-semibold">
+      <a href="https://github.com/mhmdjefr" target="_blank" rel="noopener" class="px-5 py-3 rounded-full bg-white border border-line text-ink hover:border-primary hover:text-primary transition-colors">GitHub</a>
+      <a href="#" id="linkedinLink" target="_blank" rel="noopener" class="px-5 py-3 rounded-full bg-white border border-line text-ink hover:border-primary hover:text-primary transition-colors">LinkedIn</a>
+      <a href="#" id="emailLink" class="px-5 py-3 rounded-full bg-primary text-white hover:bg-primarydark transition-colors">Send Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line">
+  <div class="max-w-5xl mx-auto px-6 py-8 text-sm text-body flex flex-col sm:flex-row justify-between gap-2">
+    <span>© <span id="year"></span> Muhammad Jeffri.</span>
+    <a href="#home" class="hover:text-primary transition-colors">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
