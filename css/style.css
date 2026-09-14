@@ -99,12 +99,13 @@ body::before {
   border-bottom: 1px solid var(--outline);
 }
 .nav-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 .nav-logo {
+  justify-self: start;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.125rem;
@@ -114,6 +115,7 @@ body::before {
 .nav-logo span { color: var(--primary); }
 
 .nav-links {
+  justify-self: center;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -136,6 +138,7 @@ body::before {
 .nav-links a.active { color: var(--primary); }
 
 .nav-cta {
+  justify-self: end;
   font-family: var(--font-body);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -169,6 +172,7 @@ body::before {
 .nav-mobile-btn:hover { border-color: var(--outline-hover); background: var(--surface-high); }
 
 @media (max-width: 768px) {
+  .nav-inner { display: flex; justify-content: space-between; }
   .nav-links, .nav-cta { display: none; }
   .nav-mobile-btn { display: flex; }
   .nav-links.open {
