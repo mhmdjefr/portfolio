@@ -7,16 +7,29 @@
     "stack": ["Kotlin", "Jetpack Compose", "Room", "MVVM", "KSP", "StateFlow"],
     "repo": "https://github.com/mhmdjefr/money-manager-app",
     "status": "v1.1.0",
-    "type": "Android"
+    "type": "Android",
+    "image": "assets/high_tech_modern_mobile_app_ui_interface_screenshot_mockups_kotlin_jetpack/screen.png"
   },
   {
     "id": "kinematic-hand-tracking",
     "name": "Kinematic Hand Tracking",
     "tagline": "A Fruit Ninja-style game controlled entirely by your hands.",
-    "description": "A real-time computer vision game using webcam hand tracking to slice falling objects dual-hand blade trails, combo multipliers, particle effects, and delta-time physics running at a steady frame rate.",
+    "description": "A real-time computer vision game using webcam hand tracking to slice falling objects, dual-hand blade trails, combo multipliers, particle effects, and delta-time physics running at a steady frame rate.",
     "stack": ["Python", "OpenCV", "MediaPipe", "NumPy", "Pygame"],
     "repo": "https://github.com/mhmdjefr/kinematic-hand-tracking",
     "status": "Active",
-    "type": "Computer Vision"
+    "type": "Computer Vision",
+    "image": "assets/modern_computer_vision_and_ai_realtime_object_detection_application_interface/screen.png"
+  },
+  {
+    "id": "melokal",
+    "name": "MeLokal",
+    "tagline": "Platform wisata lokal Indonesia — discover, explore, connect.",
+    "description": "A local tourism discovery platform for Indonesia, helping users find and explore hidden gems across the archipelago. Features destination search, curated local guides, and a community-driven review system.",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "repo": "https://github.com/mhmdjefr/MeLokal",
+    "status": "Active",
+    "type": "Web",
+    "image": "assets/sleek_modern_developer_dashboard_and_web_app_platform_ui_screenshot_mockup/screen.png"
   }
 ]
