@@ -19,7 +19,6 @@ This portfolio is built to showcase my work across **mobile engineering**, **web
 ## 📁 Project Structure
 
 ```
-├── assets/          # Images, screenshots, and design assets
 ├── css/
 │   └── style.css    # Custom Obsidian Nexus design system
 ├── data/
@@ -43,8 +42,7 @@ Adding a new project is completely data-driven. Simply edit `data/projects.json`
   "stack": ["Kotlin", "Compose"],
   "repo": "https://github.com/mhmdjefr/project-repo",
   "status": "Active",
-  "type": "Android",
-  "image": "assets/path-to-image.png"
+  "type": "Android"
 }
 ```
 

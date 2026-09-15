@@ -7,8 +7,7 @@
     "stack": ["Kotlin", "Jetpack Compose", "Room", "MVVM", "KSP", "StateFlow"],
     "repo": "https://github.com/mhmdjefr/money-manager-app",
     "status": "v1.1.0",
-    "type": "Android",
-    "image": "assets/high_tech_modern_mobile_app_ui_interface_screenshot_mockups_kotlin_jetpack/screen.png"
+    "type": "Android"
   },
   {
     "id": "kinematic-hand-tracking",
@@ -18,8 +17,7 @@
     "stack": ["Python", "OpenCV", "MediaPipe", "NumPy", "Pygame"],
     "repo": "https://github.com/mhmdjefr/kinematic-hand-tracking",
     "status": "Active",
-    "type": "Computer Vision",
-    "image": "assets/modern_computer_vision_and_ai_realtime_object_detection_application_interface/screen.png"
+    "type": "Computer Vision"
   },
   {
     "id": "melokal",
@@ -29,7 +27,6 @@
     "stack": ["HTML", "CSS", "JavaScript"],
     "repo": "https://github.com/mhmdjefr/MeLokal",
     "status": "Active",
-    "type": "Web",
-    "image": "assets/sleek_modern_developer_dashboard_and_web_app_platform_ui_screenshot_mockup/screen.png"
+    "type": "Web"
   }
 ]

@@ -52,6 +52,14 @@ project_cards = []
 for project in projects:
   project_type = escape(project['type'])
   category = CATEGORY_BY_TYPE.get(project['type'].strip().lower(), project['type'].strip().lower())
+  image_path = ROOT / project['image']
+  image_html = (
+    f'<img alt="{escape(project["name"])} Preview" '
+    f'class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" '
+    f'src="{escape(project["image"])}"/>'
+    if image_path.is_file()
+    else ''
+  )
   tech_tags = ''.join(
     f'<span class="px-2.5 py-0.5 rounded bg-[{COLORS["surface-soft"]}] '
     f'border border-[{COLORS["border-soft"]}] font-label-tag text-label-tag '
@@ -61,7 +69,7 @@ for project in projects:
   project_cards.append(f'''
 <article class="project-card group flex flex-col rounded-lg bg-[{COLORS['surface']}] border border-[{COLORS['border']}] overflow-hidden hover:border-[{COLORS['primary']}]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="{escape(category)}">
 <div class="relative w-full h-56 bg-[{COLORS['canvas']}] overflow-hidden border-b border-[{COLORS['border']}]">
-<img alt="{escape(project['name'])} Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="{escape(project['image'])}"/>
+{image_html}
 <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[{COLORS['border-soft']}] font-label-tag text-label-tag uppercase text-[{COLORS['primary']}] font-semibold shadow-xs">
   {project_type}
 </span>

@@ -142,8 +142,7 @@
 <div class="flex items-center gap-space-md">
 <a class="flex items-center gap-space-sm group" href="#">
 <div class="h-9 w-9 rounded-lg overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
-            https://lh3.googleusercontent.com/aida/AEtjO1XSFUSKvg_VlZndro4yS_Zn-lR9n0OtHM6sQ93HvParc460EXAa-hh-e5MClo5I-RI4PYfKO6yFHnMHQSlkkepsF27VIia0GIB8WSVWqgtYNeY_0dyc0j4CoszrIDSsPkhfmF5UA3ynXXgO6lycBvRQzENDr11MCOt6KN4v7ioH1D7ZjEkJl63y1b5ZbHOyNZWlEWToFL4OZJq4YejkEWalTEuxwEhOAuM44Lm0wbfZKLB8fRdMp2Z0QfbA
-          </div>
+</div>
 <span class="font-headline-sm text-headline-sm tracking-tight text-[#1A1F36] group-hover:text-[#2D6CF0] transition-colors font-semibold">Jeffri</span>
 </a>
 <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-medium">
@@ -446,7 +445,7 @@
 
 <article class="project-card group flex flex-col rounded-lg bg-[#FFFFFF] border border-[#DCE7FA] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="mobile">
 <div class="relative w-full h-56 bg-[#F5F8FF] overflow-hidden border-b border-[#DCE7FA]">
-<img alt="Money Manager Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/high_tech_modern_mobile_app_ui_interface_screenshot_mockups_kotlin_jetpack/screen.png"/>
+
 <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D0E2FF] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
   Android
 </span>
@@ -476,7 +475,7 @@
 
 <article class="project-card group flex flex-col rounded-lg bg-[#FFFFFF] border border-[#DCE7FA] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="cv">
 <div class="relative w-full h-56 bg-[#F5F8FF] overflow-hidden border-b border-[#DCE7FA]">
-<img alt="Kinematic Hand Tracking Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/modern_computer_vision_and_ai_realtime_object_detection_application_interface/screen.png"/>
+
 <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D0E2FF] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
   Computer Vision
 </span>
@@ -506,7 +505,7 @@
 
 <article class="project-card group flex flex-col rounded-lg bg-[#FFFFFF] border border-[#DCE7FA] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="web">
 <div class="relative w-full h-56 bg-[#F5F8FF] overflow-hidden border-b border-[#DCE7FA]">
-<img alt="MeLokal Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/sleek_modern_developer_dashboard_and_web_app_platform_ui_screenshot_mockup/screen.png"/>
+
 <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D0E2FF] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
   Web
 </span>
@@ -711,6 +710,30 @@
         setTimeout(typeEffect, typeSpeed);
       }
       typeEffect();
+
+      // Keep the navbar state tied to the section currently in view.
+      const navLinks = document.querySelectorAll('nav[data-active-classes] a[data-path]');
+      const sections = document.querySelectorAll('main section[id]');
+
+      function setActiveSection(sectionId) {
+        navLinks.forEach((link) => {
+          const active = link.dataset.path === sectionId;
+          link.classList.toggle("text-[#2D6CF0]", active);
+          link.classList.toggle("font-semibold", active);
+          link.classList.toggle("text-[#5B6178]", !active);
+          link.toggleAttribute("aria-current", active);
+        });
+      }
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visibleSection) setActiveSection(visibleSection.target.id);
+      }, { rootMargin: "-18% 0px -65% 0px", threshold: [0, 0.25, 0.5] });
+
+      sections.forEach((section) => sectionObserver.observe(section));
+      setActiveSection(window.location.hash.slice(1) || "home");
 
       const themeToggle = document.getElementById("theme-toggle");
       const themeIcon = themeToggle?.querySelector(".material-symbols-outlined");
