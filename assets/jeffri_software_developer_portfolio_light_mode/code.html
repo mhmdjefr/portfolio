@@ -3,7 +3,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
     @layer base {
@@ -87,21 +87,21 @@
             "margin": "2rem"
           },
           fontFamily: {
-            "code-sm": ["Roboto Mono", "monospace"],
-            "headline-lg": ["Inter", "sans-serif"],
-            "display-hero-mobile": ["Inter", "sans-serif"],
-            "headline-lg-mobile": ["Inter", "sans-serif"],
+            "code-sm": ["JetBrains Mono", "monospace"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "display-hero-mobile": ["Space Grotesk", "sans-serif"],
+            "headline-lg-mobile": ["Space Grotesk", "sans-serif"],
             "body-md": ["Inter", "sans-serif"],
             "body-lg": ["Inter", "sans-serif"],
-            "headline-sm": ["Inter", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
             "label-md": ["Inter", "sans-serif"],
             "body-sm": ["Inter", "sans-serif"],
             "label-sm": ["Inter", "sans-serif"],
-            "display-hero": ["Inter", "sans-serif"],
-            "headline-md": ["Inter", "sans-serif"],
-            "label-tag": ["Roboto Mono", "monospace"],
-            "label-code": ["Roboto Mono", "monospace"],
-            "display": ["Inter", "sans-serif"]
+            "display-hero": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "label-tag": ["JetBrains Mono", "monospace"],
+            "label-code": ["JetBrains Mono", "monospace"],
+            "display": ["Space Grotesk", "sans-serif"]
           },
           fontSize: {
             "code-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
@@ -209,7 +209,7 @@
 </div>
 <!-- Concise Technical Pitch -->
 <p class="font-body-lg text-body-lg text-[#5B6178] max-w-2xl mb-8 leading-relaxed">
-            I'm an IT student who enjoys building things end-to-end. On mobile, I work with Kotlin and Jetpack Compose. I'm also comfortable with core web technologies, and I like exploring computer vision with OpenCV and MediaPipe.
+            Engineering reliable mobile architectures, sleek reactive web platforms, and intelligent real-time computer vision systems. Bridging hardware-accelerated processing with delightful user experiences.
           </p>
 <!-- CTA Group -->
 <div class="flex flex-wrap items-center gap-space-md mb-12">
@@ -227,14 +227,14 @@
 <!-- Quick Status Pills Strip -->
 <div class="flex flex-wrap items-center gap-space-sm pt-4 border-t border-[#E0EAFF] w-full">
 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E0EAFF] font-label-tag text-label-tag text-[#5B6178] shadow-sm">
-<span class="w-1.5 h-1.5 rounded-full bg-[#2D6CF0]"></span> 3 Projects Built
-</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#2D6CF0]"></span> 3+ Years Active Coding
+            </span>
 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E0EAFF] font-label-tag text-label-tag text-[#5B6178] shadow-sm">
-<span class="w-1.5 h-1.5 rounded-full bg-[#2D6CF0]"></span> 11+ Tools & Languages
-</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#2D6CF0]"></span> 15+ Repositories
+            </span>
 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E0EAFF] font-label-tag text-label-tag text-[#5B6178] shadow-sm">
-<span class="w-1.5 h-1.5 rounded-full bg-[#2D6CF0]"></span> 3 Domains: Web, Mobile, CV
-</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#2D6CF0]"></span> Production Compose &amp; OpenCV
+            </span>
 </div>
 </div>
 </section>
@@ -433,91 +433,121 @@
 </div>
 <!-- Scalable Projects Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-
-<article class="project-card group flex flex-col rounded-lg bg-[#FFFFFF] border border-[#DCE7FA] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="mobile">
-<div class="relative w-full h-56 bg-[#F5F8FF] overflow-hidden border-b border-[#DCE7FA]">
-<img alt="Money Manager Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/high_tech_modern_mobile_app_ui_interface_screenshot_mockups_kotlin_jetpack/screen.png"/>
-<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D0E2FF] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
-  Android
-</span>
+<!-- Project Card 1: Mobile -->
+<article class="project-card group flex flex-col rounded-xl bg-white border border-[#E0EAFF] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="mobile">
+<div class="relative w-full h-56 bg-[#F8FAFE] overflow-hidden border-b border-[#E0EAFF]">
+<img alt="PulseTrack Mobile App Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WmxVj_XPz_rk5rI3jKz_36DD7irbE3eFmHmWTh1Iu8rrsxVyxuQf1GNK_sqn291C6M5NGGfSZD5IT7s37PI2ga8ui-EnvIP2mBqlvpZY9n4wqwtsqrRyQEHL-E6ClIeFOj7fzB738nQc8CUIuyJVW6GidUAVS_5xic_kkSMwEIrB1CZutnIF2coMvbV-huP28YS1UwGycsEzEhe4rps8v_fhBqcZ-7USYs-AeUmbIh7lPCsQN6g6sHOX9p"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D5E4FD] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
+                  Mobile
+                </span>
 </div>
 <div class="p-6 flex flex-col flex-1 justify-between">
 <div>
 <h3 class="font-headline-md text-headline-sm text-[#1A1F36] group-hover:text-[#2D6CF0] transition-colors mb-2 font-semibold">
-  Money Manager
-</h3>
+                    PulseTrack — Jetpack Compose Telemetry
+                  </h3>
 <p class="font-body-md text-body-md text-[#5B6178] mb-6 leading-relaxed">
-  A personal finance app with per-category budgets, CSV import/export, multi-wallet asset/liability tracking, and month-over-month stats built on a fully reactive Compose + Room stack.
-</p>
+                    Real-time biometric workout tracker built with 100% Jetpack Compose, Room persistence, MVI architecture, and custom Canvas-drawn heart rate wave graphs.
+                  </p>
 </div>
 <div>
+<!-- Tech tags -->
 <div class="flex flex-wrap gap-1.5 mb-6">
-<span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">Kotlin</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">Jetpack Compose</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">Room</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">MVVM</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">KSP</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">StateFlow</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Kotlin</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Jetpack Compose</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Room</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Coroutines</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">KSP</span>
 </div>
-<div class="flex items-center justify-between pt-4 border-t border-[#DCE7FA]">
-<a class="inline-flex items-center gap-1.5 font-label-code text-label-code text-[#5B6178] hover:text-[#2D6CF0] transition-colors" href="https://github.com/mhmdjefr/money-manager-app" rel="noopener noreferrer" target="_blank">
+<!-- Action links -->
+<div class="flex items-center justify-between pt-4 border-t border-[#E0EAFF]">
+<a class="inline-flex items-center gap-1.5 font-label-code text-label-code text-[#5B6178] hover:text-[#2D6CF0] transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[16px]">code</span>
 <span>Source</span>
+</a>
+<a class="inline-flex items-center gap-1 font-label-code text-label-code text-[#2D6CF0] hover:underline font-medium" href="#">
+<span>Case Study</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
 </a>
 </div>
 </div>
 </div>
 </article>
-
-<article class="project-card group flex flex-col rounded-lg bg-[#FFFFFF] border border-[#DCE7FA] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="cv">
-<div class="relative w-full h-56 bg-[#F5F8FF] overflow-hidden border-b border-[#DCE7FA]">
-<img alt="Kinematic Hand Tracking Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/modern_computer_vision_and_ai_realtime_object_detection_application_interface/screen.png"/>
-<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D0E2FF] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
-  Computer Vision
-</span>
+<!-- Project Card 2: CV -->
+<article class="project-card group flex flex-col rounded-xl bg-white border border-[#E0EAFF] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="cv">
+<div class="relative w-full h-56 bg-[#F8FAFE] overflow-hidden border-b border-[#E0EAFF]">
+<img alt="OmniSight Computer Vision Feed Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VuOktM2bP-qdGEBBiHWmbxwClvKQcXIjtZFdAC_dhwbiYVIxUziTvfKFOLNdqbzTWXyiXpr-dX9WuOUzpcdFDK33SnQABQNQKjmM0MW683pJcyrwErP3A9omPUFfvPDp_2BzGJ-20q0d2q7jZX0Asw7duG5aVwiKL9d9xotBEC8OB_AgmFYYZdXG3UYH-B-OxRuEczi0XNrBJlQCPDMCaKlyv6B4-eA2CzBj4i9mJfxTJFUle2LHtLzVW9"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D5E4FD] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
+                  Computer Vision
+                </span>
 </div>
 <div class="p-6 flex flex-col flex-1 justify-between">
 <div>
 <h3 class="font-headline-md text-headline-sm text-[#1A1F36] group-hover:text-[#2D6CF0] transition-colors mb-2 font-semibold">
-  Kinematic Hand Tracking
-</h3>
+                    OmniSight — Real-Time Pose Estimator
+                  </h3>
 <p class="font-body-md text-body-md text-[#5B6178] mb-6 leading-relaxed">
-  A real-time computer vision game using webcam hand tracking to slice falling objects, dual-hand blade trails, combo multipliers, particle effects, and delta-time physics running at a steady frame rate.
-</p>
+                    High-performance multi-person tracking and gesture recognition engine using MediaPipe Blazepose and OpenCV with sub-25ms inference overlays.
+                  </p>
 </div>
 <div>
+<!-- Tech tags -->
 <div class="flex flex-wrap gap-1.5 mb-6">
-<span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">Python</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">OpenCV</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">MediaPipe</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">NumPy</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">Pygame</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Python</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">OpenCV</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">MediaPipe</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">NumPy</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">TFLite</span>
 </div>
-<div class="flex items-center justify-between pt-4 border-t border-[#DCE7FA]">
-<a class="inline-flex items-center gap-1.5 font-label-code text-label-code text-[#5B6178] hover:text-[#2D6CF0] transition-colors" href="https://github.com/mhmdjefr/kinematic-hand-tracking" rel="noopener noreferrer" target="_blank">
+<!-- Action links -->
+<div class="flex items-center justify-between pt-4 border-t border-[#E0EAFF]">
+<a class="inline-flex items-center gap-1.5 font-label-code text-label-code text-[#5B6178] hover:text-[#2D6CF0] transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[16px]">code</span>
 <span>Source</span>
+</a>
+<a class="inline-flex items-center gap-1 font-label-code text-label-code text-[#2D6CF0] hover:underline font-medium" href="#">
+<span>Demo Video</span>
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
 </a>
 </div>
 </div>
 </div>
 </article>
-
-<article class="project-card group flex flex-col rounded-lg bg-[#FFFFFF] border border-[#DCE7FA] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="web">
-<div class="relative w-full h-56 bg-[#F5F8FF] overflow-hidden border-b border-[#DCE7FA]">
-<img alt="MeLokal Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/sleek_modern_developer_dashboard_and_web_app_platform_ui_screenshot_mockup/screen.png"/>
-<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D0E2FF] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
-  Web
-</span>
+<!-- Project Card 3: Web Platform -->
+<article class="project-card group flex flex-col rounded-xl bg-white border border-[#E0EAFF] overflow-hidden hover:border-[#2D6CF0]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md" data-category="web">
+<div class="relative w-full h-56 bg-[#F8FAFE] overflow-hidden border-b border-[#E0EAFF]">
+<img alt="NexusHub Dashboard Interface Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XOJGlywY5uHK6z0R-Z-AmZEaXwR0J5M5JLV4qmQ-FxtauenVmhwpLj6ySeCqEkWwV_wzPmMNqI9iojBO2fT0aalNqiOL32UOt6UNu2NseHaxeGFyKQP7WtfUCd-mI7rFC_NUlR-DjJAP53PiSPOCEeNZS9gyMFuYGwh5mBiqx2Adc1ZO7MnLTq5IhQ7o1OmKHTbdJLRX7OXUKZaSX47Vgc7eH4Wc0FZE93HVr0bJWP25F7ztyWD2d48w4"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-white/95 backdrop-blur-md border border-[#D5E4FD] font-label-tag text-label-tag uppercase text-[#2D6CF0] font-semibold shadow-xs">
+                  Web Platform
+                </span>
 </div>
 <div class="p-6 flex flex-col flex-1 justify-between">
 <div>
 <h3 class="font-headline-md text-headline-sm text-[#1A1F36] group-hover:text-[#2D6CF0] transition-colors mb-2 font-semibold">
-  MeLokal
-</h3>
+                    NexusHub — Cloud Telemetry &amp; Console
+                  </h3>
 <p class="font-body-md text-body-md text-[#5B6178] mb-6 leading-relaxed">
-  A local tourism discovery platform for Indonesia, helping users find and explore hidden gems across the archipelago. Features destination search, curated local guides, and a community-driven review system.
-</p>
+                    Modern developer portal featuring live WebSocket telemetry streaming, automated pipeline triggers, and interactive syntax-highlighted code editors.
+                  </p>
 </div>
 <div>
+<!-- Tech tags -->
 <div class="flex flex-wrap gap-1.5 mb-6">
-<span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">HTML</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">CSS</span><span class="px-2.5 py-0.5 rounded bg-[#E8F1FF] border border-[#D0E2FF] font-label-tag text-label-tag text-[#1D58D8] font-medium">JavaScript</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">TypeScript</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Next.js</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Tailwind CSS</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">WebSockets</span>
+<span class="px-2.5 py-0.5 rounded bg-[#EDF4FF] border border-[#D5E4FD] font-label-tag text-label-tag text-[#1D58D8] font-medium">Vercel</span>
 </div>
-<div class="flex items-center justify-between pt-4 border-t border-[#DCE7FA]">
-<a class="inline-flex items-center gap-1.5 font-label-code text-label-code text-[#5B6178] hover:text-[#2D6CF0] transition-colors" href="https://github.com/mhmdjefr/MeLokal" rel="noopener noreferrer" target="_blank">
+<!-- Action links -->
+<div class="flex items-center justify-between pt-4 border-t border-[#E0EAFF]">
+<a class="inline-flex items-center gap-1.5 font-label-code text-label-code text-[#5B6178] hover:text-[#2D6CF0] transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[16px]">code</span>
 <span>Source</span>
+</a>
+<a class="inline-flex items-center gap-1 font-label-code text-label-code text-[#2D6CF0] hover:underline font-medium" href="#">
+<span>Live Site</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
 </a>
 </div>
 </div>
@@ -559,7 +589,7 @@
 <div class="p-5 rounded-xl bg-white border border-[#E0EAFF] shadow-sm flex flex-col gap-3">
 <span class="font-label-tag text-label-tag uppercase text-[#717B94] tracking-wider font-semibold">Direct Transmission</span>
 <div class="flex items-center justify-between gap-2">
-<span class="font-label-code text-body-md text-[#2D6CF0] font-medium select-all" id="email-address">muhammadjeffri0302@gmail.com</span>
+<span class="font-label-code text-body-md text-[#2D6CF0] font-medium select-all" id="email-address">jeffri.dev@example.com</span>
 <button aria-label="Copy email address" class="px-2.5 py-1 rounded bg-[#F8FAFE] border border-[#D5E4FD] hover:bg-[#EDF4FF] text-[#1A1F36] font-label-tag text-label-tag flex items-center gap-1 transition-all" id="copy-email-btn" onclick="copyEmail()" type="button">
 <span class="material-symbols-outlined text-[16px] text-[#2D6CF0]" id="copy-icon">content_copy</span>
 <span class="font-medium" id="copy-status">Copy</span>
@@ -630,7 +660,7 @@
 <!-- Email Input -->
 <div class="flex flex-col gap-1.5">
 <label class="font-label-tag text-label-tag uppercase text-[#5B6178] font-semibold" for="contact-email">Your Email *</label>
-<input class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAFCFF] border border-[#D5E4FD] text-[#1A1F36] placeholder:text-[#717B94]/60 font-body-md text-body-md focus:outline-none focus:border-[#2D6CF0] focus:ring-1 focus:ring-[#2D6CF0] transition-all" id="contact-email" placeholder="muhammadjeffri0302@gmail.com" required="" type="email"/>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAFCFF] border border-[#D5E4FD] text-[#1A1F36] placeholder:text-[#717B94]/60 font-body-md text-body-md focus:outline-none focus:border-[#2D6CF0] focus:ring-1 focus:ring-[#2D6CF0] transition-all" id="contact-email" placeholder="alex@company.com" required="" type="email"/>
 </div>
 </div>
 <!-- Project Scope Select -->
@@ -667,9 +697,9 @@
       // 1. Typewriter Animation Cycling Roles
       const roles = [
         "Software Developer",
-        "Mobile Developer",
-        "Web Developer",
-        "Computer Vision Enthusiast"
+        "Mobile Craftsman (Kotlin & Compose)",
+        "Web Platform Engineer (Next.js)",
+        "Computer Vision Builder (OpenCV)"
       ];
       let roleIndex = 0;
       let charIndex = 0;
@@ -749,7 +779,7 @@
         e.preventDefault();
         const btn = document.getElementById("submit-btn");
         const feedback = document.getElementById("form-feedback");
-
+        
         btn.disabled = true;
         btn.classList.add("opacity-75");
         feedback.classList.remove("hidden");
