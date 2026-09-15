@@ -1,60 +1,45 @@
-# 🚀 Muhammad Jeffri — Software Developer Portfolio
+# Muhammad Jeffri — Software Developer Portfolio
 
-Welcome to the source code of my personal portfolio website!
+Personal portfolio for work across mobile development, web platforms, and computer vision.
 
-This portfolio is built to showcase my work across **mobile engineering**, **web platforms**, and **computer vision**. It's designed with a custom "Obsidian Nexus" aesthetic—focusing on a premium dark mode, semantic HTML, and vanilla CSS/JS (no heavy frameworks, no unnecessary dependencies).
+Live site: [mhmdjefr.vercel.app](https://mhmdjefr.vercel.app)
 
-**🌐 Live Site:** [https://mhmdjefr.vercel.app](https://mhmdjefr.vercel.app)
+## Current Stack
 
----
+- HTML5 with a single self-contained page in `index.html`
+- Tailwind CSS via CDN for the active page layout
+- IBM Plex Sans and IBM Plex Mono for typography
+- Inline vanilla JavaScript for navigation, scroll highlighting, filters, theme switching, and form interactions
+- Vercel for hosting and deployment
 
-## 🛠 Tech Stack
+## Project Structure
 
-- **HTML5:** Semantic, accessible structure
-- **CSS3:** Custom CSS variables, grid/flexbox layouts, responsive design, animations (No Tailwind or external CSS frameworks)
-- **Vanilla JS:** Lightweight interactions, intersection observers, typewriter effects, JSON data loading
-- **JSON:** Data-driven architecture (Skills and Projects are dynamically loaded from `data/profile.json` and `data/projects.json`)
-- **Hosting:** Vercel (Auto-deploy on Git push)
-
-## 📁 Project Structure
-
-```
-├── css/
-│   └── style.css    # Custom Obsidian Nexus design system
+```text
+├── index.html       # Active production page
 ├── data/
-│   ├── profile.json # Skills, stats, and profile details
-│   └── projects.json# Project details and metadata
+│   ├── profile.json # Reference profile data
+│   └── projects.json# Reference project metadata
+├── css/
+│   └── style.css    # Earlier standalone stylesheet
 ├── js/
-│   └── main.js      # Core interactions and DOM manipulation
-└── index.html       # Main HTML entrypoint
+│   └── main.js      # Earlier data-driven interaction script
+└── update_index.py  # Legacy generator, not required at runtime
 ```
 
-## 🔄 Adding New Projects
+The deployed page currently uses the markup and inline script in `index.html` directly. The files under `css/`, `js/`, and `data/`, along with `update_index.py`, are retained as supporting or legacy source material and are not loaded automatically by the active page.
 
-Adding a new project is completely data-driven. Simply edit `data/projects.json` and append a new object:
+## Run Locally
 
-```json
-{
-  "id": "project-id",
-  "name": "Project Name",
-  "tagline": "A short one-liner description",
-  "description": "A more detailed description.",
-  "stack": ["Kotlin", "Compose"],
-  "repo": "https://github.com/mhmdjefr/project-repo",
-  "status": "Active",
-  "type": "Android"
-}
+Serve the repository with any local HTTP server:
+
+```bash
+python3 -m http.server 8000
 ```
 
-The filter tabs and grid will automatically update to reflect your new content!
+Then open <http://localhost:8000> in a browser. A local server is recommended so browser navigation and external resources behave consistently.
 
-## 🏃‍♂️ Running Locally
+## Deploy
 
-1. Clone this repository
-2. Run a local web server (e.g. `python -m http.server 8000` or use VS Code Live Server)
-3. Open `http://localhost:8000` in your browser
+Push changes to the `main` branch. Vercel deploys the repository automatically.
 
-*(Note: Loading JSON files requires a server, simply opening `index.html` via `file://` might block the data loading due to CORS policies).*
-
----
-*Built with clean code & modern web standards.*
+Built with clean HTML, focused interactions, and modern web standards.
