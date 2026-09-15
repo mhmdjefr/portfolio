@@ -3,7 +3,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
     @layer base {
@@ -13,6 +13,16 @@
       main > :last-child { margin-bottom: 0 !important; }
     }
     ::-webkit-scrollbar { display: none; }
+    body.dark-mode { background: #172033 !important; color: #edf2ff !important; }
+    body.dark-mode header,
+    body.dark-mode footer,
+    body.dark-mode .bg-white { background-color: #202b40 !important; }
+    body.dark-mode .bg-\[\#F7FAFF\],
+    body.dark-mode .bg-\[\#FAFCFF\] { background-color: #172033 !important; }
+    body.dark-mode .text-\[\#1A1F36\] { color: #edf2ff !important; }
+    body.dark-mode .text-\[\#5B6178\] { color: #b7c2d8 !important; }
+    body.dark-mode .border-\[\#E0EAFF\],
+    body.dark-mode .border-\[\#D5E4FD\] { border-color: #3a4b6c !important; }
   </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -87,21 +97,21 @@
             "margin": "2rem"
           },
           fontFamily: {
-            "code-sm": ["Roboto Mono", "monospace"],
-            "headline-lg": ["Inter", "sans-serif"],
-            "display-hero-mobile": ["Inter", "sans-serif"],
-            "headline-lg-mobile": ["Inter", "sans-serif"],
-            "body-md": ["Inter", "sans-serif"],
-            "body-lg": ["Inter", "sans-serif"],
-            "headline-sm": ["Inter", "sans-serif"],
-            "label-md": ["Inter", "sans-serif"],
-            "body-sm": ["Inter", "sans-serif"],
-            "label-sm": ["Inter", "sans-serif"],
-            "display-hero": ["Inter", "sans-serif"],
-            "headline-md": ["Inter", "sans-serif"],
-            "label-tag": ["Roboto Mono", "monospace"],
-            "label-code": ["Roboto Mono", "monospace"],
-            "display": ["Inter", "sans-serif"]
+            "code-sm": ["IBM Plex Mono", "monospace"],
+            "headline-lg": ["IBM Plex Sans", "sans-serif"],
+            "display-hero-mobile": ["IBM Plex Sans", "sans-serif"],
+            "headline-lg-mobile": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "headline-sm": ["IBM Plex Sans", "sans-serif"],
+            "label-md": ["IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans", "sans-serif"],
+            "label-sm": ["IBM Plex Sans", "sans-serif"],
+            "display-hero": ["IBM Plex Sans", "sans-serif"],
+            "headline-md": ["IBM Plex Sans", "sans-serif"],
+            "label-tag": ["IBM Plex Mono", "monospace"],
+            "label-code": ["IBM Plex Mono", "monospace"],
+            "display": ["IBM Plex Sans", "sans-serif"]
           },
           fontSize: {
             "code-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
@@ -149,15 +159,15 @@
 <a class="font-body-md text-body-md text-[#5B6178] hover:text-[#1A1F36] transition-colors" data-path="contact" href="#contact">Contact</a>
 </nav>
 <div class="flex items-center gap-space-sm">
-<button aria-label="Toggle color mode" class="w-8 h-8 rounded-lg flex items-center justify-center text-[#5B6178] hover:text-[#1A1F36] hover:bg-[#EDF4FF] transition-colors" type="button">
+<button aria-label="Switch to dark mode" class="w-8 h-8 rounded-lg flex items-center justify-center text-[#5B6178] hover:text-[#1A1F36] hover:bg-[#EDF4FF] transition-colors" id="theme-toggle" type="button">
 <span class="material-symbols-outlined text-[20px]">light_mode</span>
 </button>
 <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg bg-[#2D6CF0] text-white font-label-code text-label-code font-medium hover:bg-[#1D58D8] transition-colors shadow-sm" data-path="contact" href="#contact">
           Resume
         </a>
-<div class="w-8 h-8 rounded-full bg-[#EDF4FF] border border-[#D0E1FD] flex items-center justify-center text-[#2D6CF0]">
+<a aria-label="Go to About" class="w-8 h-8 rounded-full bg-[#EDF4FF] border border-[#D0E1FD] flex items-center justify-center text-[#2D6CF0]" href="#about">
 <span class="material-symbols-outlined text-[18px]">person</span>
-</div>
+</a>
 <button aria-label="Open navigation drawer" class="md:hidden w-8 h-8 rounded-lg flex items-center justify-center text-[#5B6178] hover:text-[#1A1F36] hover:bg-[#EDF4FF] transition-colors" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button">
 <span class="material-symbols-outlined text-[22px]">menu</span>
 </button>
@@ -245,7 +255,7 @@
 <div class="flex flex-col gap-12">
 <!-- Section Header -->
 <div>
-<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">01 // ABOUT</div>
+<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">01 / ABOUT ME</div>
 <h2 class="font-headline-lg text-headline-lg text-[#1A1F36] tracking-tight font-semibold">Engineering with precision and intent</h2>
 </div>
 <!-- Content Split: Narrative & Timeline -->
@@ -312,15 +322,15 @@
 </div>
 </section>
 <!-- ========================================================================= -->
-<!-- 3. SKILLS & CAPABILITIES                                                  -->
+<!-- 3. TOOLS I USE                                                           -->
 <!-- ========================================================================= -->
 <section class="w-full py-20 px-6 lg:px-12 max-w-7xl mx-auto border-t border-[#E0EAFF]" id="skills">
 <div class="flex flex-col gap-10">
 <!-- Section Header -->
 <div>
-<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">02 // STACK &amp; CAPABILITIES</div>
-<h2 class="font-headline-lg text-headline-lg text-[#1A1F36] tracking-tight font-semibold">Technologies I build with daily</h2>
-<p class="font-body-lg text-body-lg text-[#5B6178] mt-2 max-w-2xl">Categorized competencies spanning client platforms, vision inference, and modern developer tooling.</p>
+<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">02 / TOOLS I USE</div>
+<h2 class="font-headline-lg text-headline-lg text-[#1A1F36] tracking-tight font-semibold">The tools behind my projects</h2>
+<p class="font-body-lg text-body-lg text-[#5B6178] mt-2 max-w-2xl">A practical set of tools I use for mobile apps, websites, and computer vision projects.</p>
 </div>
 <!-- 4-Column Responsive Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -412,7 +422,7 @@
 <!-- Section Header + Dynamic Category Filters -->
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
 <div>
-<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">03 // FEATURED WORK</div>
+<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">03 / SELECTED PROJECTS</div>
 <h2 class="font-headline-lg text-headline-lg text-[#1A1F36] tracking-tight font-semibold">Scalable engineering projects</h2>
 </div>
 <!-- Filter Pill Buttons -->
@@ -546,7 +556,7 @@
 <div class="flex flex-col gap-12">
 <!-- Section Header -->
 <div>
-<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">04 // GET IN TOUCH</div>
+<div class="font-label-tag text-label-tag text-[#2D6CF0] uppercase tracking-wider mb-2 font-semibold">04 / CONTACT</div>
 <h2 class="font-headline-lg text-headline-lg text-[#1A1F36] tracking-tight font-semibold">Let's build something remarkable</h2>
 <p class="font-body-lg text-body-lg text-[#5B6178] mt-2 max-w-2xl">Whether you have an ambitious mobile app, a computer vision pipeline, or a high-performance web platform in mind, my inbox is always open.</p>
 </div>
@@ -701,6 +711,26 @@
         setTimeout(typeEffect, typeSpeed);
       }
       typeEffect();
+
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = themeToggle?.querySelector(".material-symbols-outlined");
+      const savedTheme = localStorage.getItem("portfolio-theme");
+
+      function updateThemeButton() {
+        const darkMode = document.body.classList.contains("dark-mode");
+        if (themeIcon) themeIcon.textContent = darkMode ? "dark_mode" : "light_mode";
+        if (themeToggle) {
+          themeToggle.setAttribute("aria-label", darkMode ? "Switch to light mode" : "Switch to dark mode");
+        }
+      }
+
+      if (savedTheme === "dark") document.body.classList.add("dark-mode");
+      updateThemeButton();
+      themeToggle?.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem("portfolio-theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+        updateThemeButton();
+      });
 
       // 2. Project Card Category Filter Mechanics
       const filterBtns = document.querySelectorAll(".filter-btn");
